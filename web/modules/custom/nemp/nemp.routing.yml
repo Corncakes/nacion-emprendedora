@@ -1,0 +1,39 @@
+nemp.nacionemprendedora_co:
+  path: '/nacionemprendedora-co'
+  defaults:
+    _title: 'Nacion Emprendedora Co'
+    _controller: '\Drupal\nemp\Controller\VerificacionController::content'
+  requirements:
+    _permission: 'access content'
+
+nemp.nacionemprendedora_co_registro:
+  path: '/nacionemprendedora-co/register'
+  defaults:
+    _title: 'Nacion Emprendedora Co'
+    _controller: '\Drupal\nemp\Controller\VerificacionController::registro'
+  requirements:
+    _permission: 'access content'
+
+nemp.nacionemprendedora_co_no_aplica:
+  path: '/nacionemprendedora-co/no-aplica'
+  defaults:
+    _title: 'Nacion Emprendedora Co'
+    _controller: '\Drupal\nemp\Controller\VerificacionController::noAplica'
+  requirements:
+    _permission: 'access content'
+
+nemp.nacionemprendedora_co_ya_existe:
+  path: '/nacionemprendedora-co/ya-existe'
+  defaults:
+    _title: 'Nacion Emprendedora Co'
+    _controller: '\Drupal\nemp\Controller\VerificacionController::yaExiste'
+  requirements:
+    _permission: 'access content'
+
+nemp.nacionemprendedora_co_felicitaciones:
+  path: '/nacionemprendedora-co/felicitaciones'
+  defaults:
+    _title: 'Nacion Emprendedora Co'
+    _controller: '\Drupal\nemp\Controller\VerificacionController::felicitaciones'
+  requirements:
+    _permission: 'access content'

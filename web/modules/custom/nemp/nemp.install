@@ -1,0 +1,97 @@
+<?php
+
+function nemp_schema() {
+  $schema['co_registro'] = [
+    'description' => 'Stores module data.',
+    'fields' => [
+      'cid' => [
+        'description' => 'The primary key.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'nit' => [
+        'description' => 'The nit or cc field.',
+        'type' => 'varchar',
+        'length' => 60,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'codigo_estado_matricula' => [
+        'description' => 'The codigo estado matricula field.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'email' => [
+        'description' => 'The email field.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'ciiu' => [
+        'description' => 'The cod ciiu field.',
+        'type' => 'int',
+        'not null' => FALSE,
+      ],
+      'sector' => [
+        'description' => 'The sector id field.',
+        'type' => 'int',
+        'not null' => FALSE,
+      ],
+      'has_domain' => [
+        'description' => 'Has domain',
+        'type' => 'int',
+        'size' => 'small',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ],
+      'domain' => [
+        'description' => 'The domain field.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'authorize' => [
+        'description' => 'Authorize privacy policies',
+        'type' => 'int',
+        'size' => 'small',
+        'unsigned' => TRUE,
+        'not null' => FALSE,
+      ]
+    ],
+    'primary key' => [
+      'cid',
+    ]
+  ];
+
+  $schema['co_user_pin'] = [
+    'description' => 'Stores module data.',
+    'fields' => [
+      'upid' => [
+        'description' => 'The primary key.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'pin' => [
+        'description' => 'The pin field.',
+        'type' => 'varchar',
+        'length' => 50,
+        'not null' => TRUE,
+        'default' => '',
+      ],
+      'cid' => [
+        'description' => 'The user id field.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => [
+      'upid',
+    ]
+  ];
+
+  return $schema;
+}

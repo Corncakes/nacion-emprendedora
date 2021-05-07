@@ -1,0 +1,14 @@
+<?php
+
+function nemp_mail($key, &$message, $params) {
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'ganador_mail':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('General mail: @subject', ['@subject' => $params['subject']], $options);
+      $message['body'][] = $params['message'];
+      break;
+  }
+}

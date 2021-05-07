@@ -1,0 +1,7 @@
+name: Nación Emprendedora Custom Module
+description: Custom module for Nacioón Emprendedora.
+package: Custom
+
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
